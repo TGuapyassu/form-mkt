@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualização de Dados</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #34495e;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="date"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .inline-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .inline-group>div {
+            flex: 1;
+            min-width: 0;
+            /* Permite que o flex item encolha abaixo de seu conteúdo mínimo */
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 10px;
+            font-weight: normal;
+        }
+
+        .child-info {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .child-info h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+
+        .child-info .form-group {
+            margin-bottom: 10px;
+        }
+
+        .submit-btn {
+            background-color: #fb4c00;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            background-color: #d94100;
+        }
+
+        .thank-you {
+            margin-top: 20px;
+            text-align: center;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+
+        .section-divider {
+            border-top: 1px solid #ecf0f1;
+            margin: 25px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Atualize seus dados e participe das maiores campanhas do mercado!</h1>
+        <h2>Tenha um 2025 mais Leve!</h2>
+
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="empresa">Empresa de vendas:</label>
+                <input type="text" id="empresa" name="empresa" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="inline-group">
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" required>
+                </div>
+                <div class="form-group">
+                    <label for="nascimento">Data de nascimento:</label>
+                    <input type="date" id="nascimento" name="nascimento" required>
+                </div>
+            </div>
+
+            <div class="inline-group">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="endereco">End. residencial:</label>
+                <input type="text" id="endereco" name="endereco" required>
+            </div>
+
+            <div class="inline-group">
+                <div class="form-group">
+                    <label for="numero">Nº:</label>
+                    <input type="text" id="numero" name="numero" required>
+                </div>
+                <div class="form-group">
+                    <label for="complemento">Complemento:</label>
+                    <input type="text" id="complemento" name="complemento">
+                </div>
+                <div class="form-group">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" required>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="form-group">
+                <label>Estado civil:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="estado_civil" value="solteiro" required> Solteiro</label>
+                    <label><input type="radio" name="estado_civil" value="casado"> Casado</label>
+                    <label><input type="radio" name="estado_civil" value="viuvo"> Viúvo</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="conjuge">Nome do cônjuge:</label>
+                <input type="text" id="conjuge" name="conjuge">
+            </div>
+
+            <div class="form-group">
+                <label for="nascimento_conjuge">Data de nascimento do cônjuge:</label>
+                <input type="date" id="nascimento_conjuge" name="nascimento_conjuge">
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="form-group">
+                <label>Filhos:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="tem_filhos" value="sim" required> Sim</label>
+                    <label><input type="radio" name="tem_filhos" value="nao"> Não</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="qtd_filhos">Quantos filhos:</label>
+                <input type="number" id="qtd_filhos" name="qtd_filhos" min="0" max="10">
+            </div>
+
+            <div id="filhos-container">
+                <!-- Os campos para os filhos serão adicionados aqui dinamicamente -->
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="form-group">
+                <label for="time">Time de futebol que torce:</label>
+                <input type="text" id="time" name="time">
+            </div>
+
+            <div class="inline-group">
+                <div class="form-group">
+                    <label for="calcado">Quanto você calça:</label>
+                    <input type="number" id="calcado" name="calcado" min="20" max="50">
+                </div>
+                <div class="form-group">
+                    <label for="camisa">Tamanho da camisa:</label>
+                    <input type="text" id="camisa" name="camisa">
+                </div>
+                <div class="form-group">
+                    <label for="calca">Tamanho da calça:</label>
+                    <input type="text" id="calca" name="calca">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Programa preferido:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="programa" value="cinema"> Cinema</label>
+                    <label><input type="checkbox" name="programa" value="teatro"> Teatro</label>
+                    <label><input type="checkbox" name="programa" value="show"> Show</label>
+                    <label><input type="checkbox" name="programa" value="outros"> Outros:</label>
+                </div>
+                <input type="text" id="outros_programas" name="outros_programas">
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="form-group">
+                <label>Função na sua corretora:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="funcao" value="adm" required> Adm</label>
+                    <label><input type="radio" name="funcao" value="corretor"> Corretor</label>
+                    <label><input type="radio" name="funcao" value="gerente"> Gerente</label>
+                    <label><input type="radio" name="funcao" value="supervisor"> Supervisor</label>
+                    <label><input type="radio" name="funcao" value="socio"> Sócio</label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Enviar</button>
+        </form>
+
+        <p class="thank-you">Obrigado por atualizar os seus dados! Suas informações são muito importantes para aprimorar
+            nosso relacionamento com você!</p>
+    </div>
+
+    <script>
+        document.getElementById('qtd_filhos').addEventListener('change', function () {
+            const container = document.getElementById('filhos-container');
+            container.innerHTML = ''; // Limpa o conteúdo anterior
+            const qtd = this.value;
+
+            for (let i = 1; i <= qtd; i++) {
+                const childDiv = document.createElement('div');
+                childDiv.className = 'child-info';
+                childDiv.innerHTML = `
+                    <h3>Filho ${i}</h3>
+                    <div class="form-group">
+                        <label for="filho${i}">Nome do filho ${i}:</label>
+                        <input type="text" id="filho${i}" name="filho${i}">
+                    </div>
+                    <div class="form-group">
+                        <label for="nascimento_filho${i}">Nascimento do filho ${i}:</label>
+                        <input type="date" id="nascimento_filho${i}" name="nascimento_filho${i}">
+                    </div>
+                    <div class="form-group">
+                        <label>Sexo:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="sexo_filho${i}" value="M"> M</label>
+                            <label><input type="radio" name="sexo_filho${i}" value="F"> F</label>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(childDiv);
+            }
+        });
+    </script>
+</body>
+
+</html>
