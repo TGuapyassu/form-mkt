@@ -168,7 +168,7 @@
             <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/roxo%20+%20laranja-UCLxTJN4waNEtFB9JBUoTeCNgFsW3g.png"
                 alt="Leve Saúde - O plano da sua vida" class="logo-image">
             <div class="header-content">
-                <h1>Atualize seus dados e participe das maiores campanhas do mercado!</h1>
+                <h1>Vendedor, atualize seus dados e participe das maiores campanhas do mercado!</h1>
                 <h2>Tenha um 2025 mais Leve!</h2>
             </div>
         </div>
@@ -213,6 +213,17 @@
 
             <div class="inline-group">
                 <div class="form-group">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" required>
+                </div>
+                <div class="form-group">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" required>
+                </div>
+            </div>
+
+            <div class="inline-group">
+                <div class="form-group">
                     <label for="numero">Nº:</label>
                     <input type="text" id="numero" name="numero" required>
                 </div>
@@ -226,10 +237,6 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <label for="cidade">Cidade:</label>
-                <input type="text" id="cidade" name="cidade" required>
-            </div>
 
             <div class="section-divider"></div>
 
@@ -239,7 +246,12 @@
                     <label><input type="radio" name="estado_civil" value="solteiro" required> Solteiro</label>
                     <label><input type="radio" name="estado_civil" value="casado"> Casado</label>
                     <label><input type="radio" name="estado_civil" value="viuvo"> Viúvo</label>
+                    <label><input type="radio" name="estado_civil" value="outros"> Outros</label>
                 </div>
+            </div>
+            <div class="form-group" id="outro_estado_civil_group" style="display: none;">
+                <label for="outro_estado_civil">Especifique o estado civil:</label>
+                <input type="text" id="outro_estado_civil" name="outro_estado_civil">
             </div>
 
             <div class="form-group">
@@ -250,6 +262,11 @@
             <div class="form-group">
                 <label for="email_conjuge">Email do cônjuge:</label>
                 <input type="email" id="email_conjuge" name="email_conjuge">
+            </div>
+
+            <div class="form-group">
+                <label for="telefone_conjuge">Telefone do cônjuge:</label>
+                <input type="tel" id="telefone_conjuge" name="telefone_conjuge">
             </div>
 
             <div class="form-group">
@@ -290,7 +307,15 @@
                 </div>
                 <div class="form-group">
                     <label for="camisa">Tamanho da camisa:</label>
-                    <input type="text" id="camisa" name="camisa">
+                    <select id="camisa" name="camisa">
+                        <option value="">Selecione</option>
+                        <option value="pp">PP</option>
+                        <option value="p">P</option>
+                        <option value="m">M</option>
+                        <option value="g">G</option>
+                        <option value="gg">GG</option>
+                        <option value="xg">XG</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="calca">Tamanho da calça:</label>
@@ -358,6 +383,31 @@
                 `;
                 container.appendChild(childDiv);
             }
+        });
+
+        const estadoCivilRadios = document.querySelectorAll('input[name="estado_civil"]');
+        const outroEstadoCivilGroup = document.getElementById('outro_estado_civil_group');
+
+        estadoCivilRadios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                if (radio.value === 'outros') {
+                    outroEstadoCivilGroup.style.display = 'block';
+                } else {
+                    outroEstadoCivilGroup.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script>
+        document.querySelectorAll('input[name="estado_civil"]').forEach(function (radio) {
+            radio.addEventListener('change', function () {
+                var outroGroup = document.getElementById('outro_estado_civil_group');
+                if (this.value === 'outros') {
+                    outroGroup.style.display = 'block';
+                } else {
+                    outroGroup.style.display = 'none';
+                }
+            });
         });
     </script>
 </body>
